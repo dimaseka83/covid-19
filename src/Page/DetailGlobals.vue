@@ -10,22 +10,22 @@
             v-if="loading"
           ></v-progress-linear>
             <v-row v-else>
-                <v-col cols="4" v-for="(totalData, idx) in totalDataSlice" :key="idx">
+                <v-col cols="12" sm="6" md="4" v-for="(totalData, idx) in totalDataSlice" :key="idx">
                     <v-card elevation="12" rounded="xl" class="text-center">
                         <v-container class="pa-10">
                             <h1 class="display-2">{{ checkNull(totalData.provinceState) }}</h1>
                             <h1 class="headline font-weight-medium my-5 grey--text">{{ checkNull(totalData.countryRegion) }}</h1>
                             <p class="subtitle green--text">Update Terakhir {{ convertDate(totalData.lastUpdate) }}</p>
                             <v-row>
-                                <v-col cols="4">
+                                <v-col cols="12" sm="6" md="4">
                                     <p class="font-weight-bold red--text">{{ splitNumber(checkNull(totalData.deaths)) }}</p>
                                     <p class="subtitle font-weight-medium  grey--text">Meninggal</p>
                                 </v-col>
-                                <v-col cols="4">
+                                <v-col cols="12" sm="6" md="4">
                                     <p class="font-weight-bold green--text">{{ splitNumber(checkNull(totalData.recovered)) }}</p>
                                     <p class="subtitle font-weight-medium  grey--text">Sembuh</p>
                                 </v-col>
-                                <v-col cols="4">
+                                <v-col cols="12" sm="6" md="4">
                                     <p class="font-weight-bold amber--text">{{ splitNumber(checkNull(totalData.confirmed)) }}</p>
                                     <p class="subtitle font-weight-medium  grey--text">Terkonfirmasi</p>
                                 </v-col>
